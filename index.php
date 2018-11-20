@@ -30,16 +30,20 @@ if(isset($_POST["cari"])){
     </form>
     
     <a href="tambah_data.php">Tambah Data Mahasiswa</a>
-    <table border="1" cellpadding="10" cellspacing="0">
-        <tr>
-            <th>No. </th>
-            <th>Nama </th>
-            <th>Nim </th>
-            <th>Email </th>
-            <th>Jurusan </th>
-            <th>Gambar </th>
-            <th>Aksi </th>
-        </tr>
+    
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>No. </th>
+                <th>Nama </th>
+                <th>Nim </th>
+                <th>Email </th>
+                <th>Jurusan </th>
+                <th>Gambar </th>
+                <th>Aksi </th>
+                </tr>
+        </thead>
+        <tbody>
         <?php $i=1 ?>
         <!-- kita buat contoh data static -->
         <?php foreach ($mahasiswa as $row):?>
@@ -57,6 +61,7 @@ if(isset($_POST["cari"])){
         </tr>
     <?php $i++ ?>
     <?php endforeach;?>
+        </tbody>
     </table>
 </body>
 </html>
