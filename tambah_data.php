@@ -20,7 +20,7 @@
         <title>Tambah data</title>
     </head>
     <body>
-    
+
     <form action="" method="POST" class="form-horizontal" role="form">
             <div class="form-group">
                 <legend class="text-center">Tambah data mahasiswa</legend>
@@ -61,40 +61,6 @@
                 </div>
             </div>
     </form>
-<!--      
-        <form action="" method="POST" role="form">
-            <legend class="text-center">Tambah data mahasiswa</legend>
-            <div class="form-group">
-                <label for="Nama">Nama:</label>
-                <div>
-                <input type="text" class="form-control" id="Nama" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="Nim">NIM: </label>
-                <div>
-                <input type="text" class="form-control" id="Nim" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="Email">Email: </label>
-                <div>
-                <input type="email" name="" id="input" class="form-control" value="" required="required" title="">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="Jurusan">Jurusan : </label>
-                <div>
-                <input type="text" class="form-control" id="Jurusan" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="Gambar">Gambar : </label>
-                <div>
-                <input type="file" name="Gambar" id="Gambar" required>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Tambah</button>
-        </form> -->
+    
     </body>
 </html>
