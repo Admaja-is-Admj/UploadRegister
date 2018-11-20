@@ -1,6 +1,16 @@
 <?php
     require 'functions.php';
     if (isset($_POST['submit'])) {
+        $nama = $_POST["Nama"];
+        $nim  =$_POST["Nim"];
+        $email =$_POST["Email"];
+        $gambar = upload();
+        if(!$gambar){
+            return false;
+        }
+        $query = "INSERT INTO mahasiswa VALUES
+                    ('','$nama','$nim','$email','$jurusan','$gambar')";
+        mysqli_query($conn,$query);
         if(tambah($_POST)>0)
         {
             echo "
