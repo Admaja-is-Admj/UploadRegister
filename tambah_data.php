@@ -1,9 +1,24 @@
 <?php
     require 'functions.php';
     if (isset($_POST['submit'])) {
-        var_dump($_POST);
-        var_dump($_FILES);
-        die();
+        if(tambah($_POST)>0)
+        {
+            echo "
+            <script>
+                alert('Data Berhasil Disimpan');
+                document.location.href='index.php';
+            </script>
+
+            ";
+        }else{
+            echo "
+            <script>
+                alert('Data Gagal Disimpan');
+                document.location.href='tambah_data.php';
+            </script>";
+            echo "<br>";
+            echo mysqli_error($conn);
+        }
     }
 ?>
 
@@ -21,7 +36,7 @@
     </head>
     <body>
 
-    <form action="" method="POST" class="form-horizontal" role="form">
+    <form action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <legend class="text-center">Tambah data mahasiswa</legend>
             </div>
@@ -57,10 +72,10 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-10 col-sm-offset-2">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
                 </div>
             </div>
     </form>
-    
+
     </body>
 </html>
